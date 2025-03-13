@@ -10,7 +10,7 @@ body{
   border-radius: 40px;
   background-color: #090a17;
   position: fixed;
-  top: 20px;
+  margin-top: 20px;
   left: 50%; 
   transform: translateX(-50%);
   border: 1px solid #131420;
@@ -204,10 +204,10 @@ body{
     border-radius: 0px;
     background-color: #090a17;
     position: fixed;
-    top: calc(100vh - 60px);
     bottom: 0;
     right: 0;
     left: 0;
+    margin-top: 0;
     transform: none;
     border-top: 1px solid #131420;
     position: fixed;
