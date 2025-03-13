@@ -1,0 +1,317 @@
+body{
+  margin: 0;
+  padding: 0;
+  background-color: #05060F;
+  font-family: 'Host Grotesk';
+}
+.header {
+  width: auto;
+  height: 45px;
+  border-radius: 40px;
+  background-color: #090a17;
+  position: fixed;
+  top: 20px;
+  left: 50%; 
+  transform: translateX(-50%);
+  border: 1px solid #131420;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-right: 8px;
+  z-index: 101;
+}
+.topheader{
+  width: 100%;
+  height: 60px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #090a177e;
+  border-bottom: 1px solid #131420;
+  display: none;
+}
+.toplogo{
+  width: 30px;
+  aspect-ratio: 1/1;
+}
+.toplogoheader{
+  width: 20px;
+  aspect-ratio: 1/1;
+  margin-left: 20px;
+}
+.toptag{
+  color: white;
+  font-size: 20px;
+  font-weight: 600;
+  margin-left: 12px;
+}
+.toptagheader{
+  color: white;
+  font-size: 16px;
+  font-weight: 600;
+  margin-left: 8px;
+}
+.home{
+  width: auto;
+  margin-right: 20px;
+  height: 100%;
+  display: flex;
+  justify-content: start;
+  align-items: center;
+}
+.links{
+  flex: 1;
+  height: 100%;
+  /* background-color: aqua; */
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+.link{
+  padding-left: 16px;
+  padding-right: 16px;
+  height: 75%;
+  background-color: transparent;
+  border-radius: 40px;
+  border: 1px solid transparent;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #5A6883;
+  font-weight: 600;
+  font-size: 12px;
+  cursor: pointer;
+}
+.link:hover{
+  transition: 0.5s;
+  background: linear-gradient(135deg, #0a0c19 0%, #111224 100%);
+  border: 1px solid rgba(57, 57, 57, 0.651);
+}
+.linktag{
+  width: 16px;
+  margin-right: 6px;
+}
+/*Page1*/
+/* .page1{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  width: 100%;
+  min-height: 100vh;
+  max-height: auto;
+} */
+.page1 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  width: 100%;
+  min-height: 100vh;
+  max-height: auto;
+  position: relative;
+  overflow: hidden; /* Ensure the gradient doesn't overflow */
+}
+
+.page1::before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 100%;
+  height: 100%;
+  background: radial-gradient(
+    circle at center,
+    rgba(11, 13, 28, 0.8) 0%, /* Slightly lighter than the background */
+    rgba(5, 6, 15, 0) 70% /* Fades into the background */
+  );
+  z-index: -1; /* Place it behind the content */
+}
+.toptagpage1{
+  color: grey;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.side{
+  width: 60px;
+  height: 1px;
+  margin: 8px;
+  background: linear-gradient(135deg, transparent 0%, #3b3e81 100%);
+  border-radius: 50px 0 0 50px;
+}
+.side2{
+  width: 60px;
+  height: 1px;
+  margin: 8px;
+  background: linear-gradient(135deg, #3b3e81 0%, transparent 100%);
+  border-radius: 50px 0 0 50px;
+}
+.headpage1{
+  font-size: 108px;
+  color: #A7CAFA;
+  font-weight: 600;
+}
+.subhead{
+  width: 45%;
+  color: rgb(100, 100, 100);
+  font-size: 16px;
+  font-weight: 600;
+  text-align: center;
+  margin-top: 30px;
+}
+.buttonspage1{
+  margin-top: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.btn1{
+  width: 110px;
+  height: 35px;
+  border-radius: 4px;
+  border: 1px solid #929cb9;
+  background: linear-gradient(135deg, #1c1f50 0%, #12153e 100%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  margin: 12px;
+}
+.btntag{
+  width: 12px;
+}
+.btntext{
+  color: rgba(255, 255, 255, 0.496);
+  font-size: 12px;
+  font-weight: 600;
+  margin-left: 8px;
+}
+
+
+@media (max-width:1000px){
+  .topheader{
+    display: flex;
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+  }
+  .header{
+    width: 100%;
+    height: 60px;
+    border-radius: 0px;
+    background-color: #090a17;
+    position: fixed;
+    top: calc(100vh - 60px);
+    bottom: 0;
+    right: 0;
+    left: 0;
+    transform: none;
+    border-top: 1px solid #131420;
+    position: fixed;
+  }
+  .home{
+    display: none;
+  }
+  .link{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+  }
+  .linktag{
+    width: 16px;
+    margin-right: 0;
+    margin-bottom: 4px;
+  }
+  .page1 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 100%;
+    min-height: 100vh;
+    max-height: auto;
+    position: relative;
+    overflow: hidden; /* Ensure the gradient doesn't overflow */
+  }
+  
+  .page1::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100%;
+    height: 100%;
+    background: radial-gradient(
+      circle at center,
+      rgba(11, 13, 28, 0.8) 0%, /* Slightly lighter than the background */
+      rgba(5, 6, 15, 0) 70% /* Fades into the background */
+    );
+    z-index: -1; /* Place it behind the content */
+  }
+  .toptagpage1{
+    color: grey;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .side{
+    width: 60px;
+    height: 1px;
+    margin: 8px;
+    background: linear-gradient(135deg, transparent 0%, #3b3e81 100%);
+    border-radius: 50px 0 0 50px;
+  }
+  .side2{
+    width: 60px;
+    height: 1px;
+    margin: 8px;
+    background: linear-gradient(135deg, #3b3e81 0%, transparent 100%);
+    border-radius: 50px 0 0 50px;
+  }
+  .headpage1{
+    font-size: 64px;
+    color: #A7CAFA;
+    font-weight: 600;
+  }
+  .subhead{
+    width: 80%;
+    color: rgb(100, 100, 100);
+    font-size: 15px;
+    font-weight: 600;
+    text-align: center;
+    margin-top: 30px;
+  }
+  .buttonspage1{
+    margin-top: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .btn1{
+    width: 110px;
+    height: 35px;
+    border-radius: 4px;
+    border: 1px solid #929cb9;
+    background: linear-gradient(135deg, #1c1f50 0%, #12153e 100%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    margin: 8px;
+  }
+  .btntag{
+    width: 12px;
+  }
+  .btntext{
+    color: rgba(255, 255, 255, 0.496);
+    font-size: 12px;
+    font-weight: 600;
+    margin-left: 8px;
+  }
+  
+}
