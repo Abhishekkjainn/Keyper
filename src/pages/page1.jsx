@@ -1,3 +1,4 @@
+import { BrowserRouter as Router, Routes, Route, Link } from 'react-router-dom';
 export default function Page1() {
   return (
     <div className="page1">
@@ -11,14 +12,14 @@ export default function Page1() {
         by Node.js, Express.js, React, and Firebase.
       </div>
       <div className="buttonspage1">
-        <div className="btn1">
+        <Link to={'/auth'} className="btn1">
           <img src="/user.png" alt="User button" className="btntag" />
           <div className="btntext">Sign In</div>
-        </div>
-        <div className="btn1">
+        </Link>
+        <Link to={'/auth'} className="btn1">
           <img src="/register.png" alt="User button" className="btntag" />
           <div className="btntext">Register</div>
-        </div>
+        </Link>
       </div>
     </div>
   );
