@@ -12,11 +12,11 @@ export default function Page1() {
         by Node.js, Express.js, React, and Firebase.
       </div>
       <div className="buttonspage1">
-        <Link to={'/auth'} className="btn1">
+        <Link to={'/authenticate'} className="btn1">
           <img src="/user.png" alt="User button" className="btntag" />
           <div className="btntext">Sign In</div>
         </Link>
-        <Link to={'/auth'} className="btn1">
+        <Link to={'/authenticate'} className="btn1">
           <img src="/register.png" alt="User button" className="btntag" />
           <div className="btntext">Register</div>
         </Link>

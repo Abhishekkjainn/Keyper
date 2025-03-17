@@ -556,4 +556,8 @@ body{
   height: 80vh;
   background-color: #0a0c19;
   border-radius: 40px;
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  flex-direction: column;
 }
