@@ -1,14 +1,15 @@
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import './App.css';
 import Homepage from './Homepage';
-import Authpage from './authpage/authpage';
+import Loading from './pages/loading';
+// import Dashboard from './pages/dashboard';
 
 function App() {
   return (
     <Router>
       <Routes>
         <Route path="/" element={<Homepage />} />
-        <Route path="/authenticate" element={<Authpage />} />
+        <Route path="/:path/checktoken/:token" element={<Loading />} />
       </Routes>
     </Router>
   );

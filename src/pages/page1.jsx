@@ -1,5 +1,24 @@
-import { BrowserRouter as Router, Routes, Route, Link } from 'react-router-dom';
+import { useEffect } from 'react';
+
 export default function Page1() {
+  const apikey = '111111111';
+
+  const handleRedirect = async () => {
+    const currentUrl = encodeURIComponent(window.location.href);
+    const apiUrl = `http://localhost:6969/redirect/${currentUrl}/${apikey}`;
+
+    try {
+      const response = await fetch(apiUrl, { method: 'GET' });
+      if (response.redirected) {
+        window.location.href = response.url;
+      } else {
+        console.log('Redirect failed:', await response.text());
+      }
+    } catch (error) {
+      console.error('Error fetching redirect:', error);
+    }
+  };
+
   return (
     <div className="page1">
       <div className="toptagpage1">
@@ -12,14 +31,14 @@ export default function Page1() {
         by Node.js, Express.js, React, and Firebase.
       </div>
       <div className="buttonspage1">
-        <Link to={'/authenticate'} className="btn1">
+        <button onClick={handleRedirect} className="btn1">
           <img src="/user.png" alt="User button" className="btntag" />
           <div className="btntext">Sign In</div>
-        </Link>
-        <Link to={'/authenticate'} className="btn1">
+        </button>
+        <button onClick={handleRedirect} className="btn1">
           <img src="/register.png" alt="User button" className="btntag" />
           <div className="btntext">Register</div>
-        </Link>
+        </button>
       </div>
     </div>
   );
