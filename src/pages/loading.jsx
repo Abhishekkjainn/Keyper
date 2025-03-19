@@ -12,7 +12,7 @@ export default function Loading() {
     const fetchData = async () => {
       try {
         const response = await fetch(
-          `http://localhost:6969/checktoken/token=${token}/apikey=${apikey}`
+          `https://keyperapi.vercel.app/checktoken/token=${token}/apikey=${apikey}`
         );
         const result = await response.json();
         setData(result);
