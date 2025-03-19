@@ -359,6 +359,58 @@ body{
   color: white;
 }
 
+/*page4*/
+.page4{
+  width: 100%;
+  min-height: 100vh;
+  max-height: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.password{
+  color: #5A6883;
+  font-size: 48px;
+  letter-spacing: 4px;
+}
+.code-container2{
+  background-color: #0D0F1A;
+  border: 1px solid #1F2233;
+  padding: 15px;
+  border-radius: 10px;
+  width: 80%;
+  max-width: 700px;
+  margin: 0 auto;
+  position: relative;
+  text-align: left;
+  overflow-x: auto;
+  margin-top: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(135deg, #08090f89 0%, #101220 100%);
+}
+
+.password-container {
+  color: #5A6883;
+  font-size: 48px;
+  letter-spacing: 4px;
+  font-weight: 600;
+}
+
+.scramble-char {
+  display: inline-block;
+  transition: all 0.2s;
+  transform: scale(1);
+  color: #5A6883;
+  font-size: 48px;
+  letter-spacing: 4px;
+}
+
+
+
 
 
 @media (max-width:1000px){
