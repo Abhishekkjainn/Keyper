@@ -5,7 +5,7 @@ export default function Page1() {
 
   const handleRedirect = async () => {
     const currentUrl = encodeURIComponent(window.location.href);
-    const apiUrl = `https://keyperapi.vercel.app/redirect/${currentUrl}/${apikey}`;
+    const apiUrl = `https://authkeyper.vercel.app/redirect/${currentUrl}/${apikey}`;
 
     try {
       const response = await fetch(apiUrl, { method: 'GET' });
