@@ -1,7 +1,7 @@
 import { useEffect } from 'react';
 
 export default function Page1() {
-  const apikey = '111111111';
+  const apikey = '5Iyx6x7vB';
 
   const handleRedirect = async () => {
     const currentUrl = encodeURIComponent(window.location.href);
