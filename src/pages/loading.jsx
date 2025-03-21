@@ -2,11 +2,10 @@ import { useParams, useNavigate } from 'react-router-dom';
 import { useEffect, useState } from 'react';
 
 export default function Loading() {
-  const { token } = useParams();
+  const { token, apikey } = useParams();
   const navigate = useNavigate();
   const [data, setData] = useState(null);
   const [loading, setLoading] = useState(true);
-  const apikey = '132456780'; // API Key
 
   useEffect(() => {
     const fetchData = async () => {

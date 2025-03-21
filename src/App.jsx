@@ -9,7 +9,7 @@ function App() {
     <Router>
       <Routes>
         <Route path="/" element={<Homepage />} />
-        <Route path="/:path/checktoken/:token" element={<Loading />} />
+        <Route path="/:path/checktoken/:token/:apikey" element={<Loading />} />
       </Routes>
     </Router>
   );
