@@ -1,4 +1,5 @@
 import { useEffect } from 'react';
+import { BrowserRouter as Router, Routes, Route, Link } from 'react-router-dom';
 
 export default function Page1() {
   const apikey = '5Iyx6x7vB';
@@ -35,10 +36,10 @@ export default function Page1() {
           <img src="/user.png" alt="User button" className="btntag" />
           <div className="btntext">Sign In</div>
         </button>
-        <button onClick={handleRedirect} className="btn1">
+        <Link to={'/register'} className="btn1">
           <img src="/register.png" alt="User button" className="btntag" />
           <div className="btntext">Register</div>
-        </button>
+        </Link>
       </div>
     </div>
   );
