@@ -7,26 +7,22 @@ export default function Header() {
         <div className="toptag">Keyper</div>
       </div>
       <div className="header">
-        <div className="home">
+        <Link to={'/'} className="home">
           <img src="titlelog.png" alt="mainlogo" className="toplogoheader" />
           <div className="toptagheader">Keyper</div>
-        </div>
+        </Link>
         <div className="links">
           <div className="link">
-            {' '}
             <img src="/docs.png" alt="docs" className="linktag" /> Docs
           </div>
-          <div className="link">
-            {' '}
+          <Link to={'/dashboard'} className="link">
             <img src="/dashboard.png" alt="docs" className="linktag" />{' '}
             Dashboard
-          </div>
+          </Link>
           <div className="link">
-            {' '}
             <img src="/contact.png" alt="docs" className="linktag" /> Contact
           </div>
           <div className="link">
-            {' '}
             <img src="/features.png" alt="docs" className="linktag" /> Features
           </div>
         </div>

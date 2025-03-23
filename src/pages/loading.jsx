@@ -29,7 +29,7 @@ export default function Loading() {
           localStorage.setItem('token', token);
         }
         setTimeout(() => {
-          navigate('/');
+          navigate('/profile');
         }, 2000);
       } catch (error) {
         console.error('API fetch error:', error);
