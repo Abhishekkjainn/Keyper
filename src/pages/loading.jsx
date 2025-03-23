@@ -6,6 +6,8 @@ export default function Loading() {
   const navigate = useNavigate();
   const [data, setData] = useState(null);
   const [loading, setLoading] = useState(true);
+  const [userphone, setUserphone] = useState('');
+  const [useremail, setUserEmail] = useState('');
 
   useEffect(() => {
     const fetchData = async () => {
@@ -16,11 +18,19 @@ export default function Loading() {
         const result = await response.json();
         setData(result);
         setLoading(false);
+        if (result.success) {
+          setUserphone(result.data.phone);
+          setUserEmail(result.data.email);
 
-        // Redirect to '/' after 10 seconds
+          // Save to local storage
+          localStorage.setItem('userEmail', result.data.email);
+          localStorage.setItem('userPhone', result.data.phone);
+          localStorage.setItem('apiKey', apikey);
+          localStorage.setItem('token', token);
+        }
         setTimeout(() => {
           navigate('/');
-        }, 10000);
+        }, 2000);
       } catch (error) {
         console.error('API fetch error:', error);
         setLoading(false);
@@ -28,7 +38,7 @@ export default function Loading() {
     };
 
     fetchData();
-  }, [token, navigate]);
+  }, [token, apikey, navigate]);
 
   return (
     <div className="spinner">

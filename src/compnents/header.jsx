@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom';
 export default function Header() {
   return (
     <div className="headermain">
@@ -30,6 +31,9 @@ export default function Header() {
           </div>
         </div>
       </div>
+      <Link to={'/profile'} className="profile">
+        <img src="/profile2.png" alt="Profile Icon" className="profileimg" />
+      </Link>
     </div>
   );
 }
