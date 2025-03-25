@@ -1,3 +1,9 @@
+import Header from '../compnents/header';
 export default function Dashboard() {
-  return <div className="dashboard"></div>;
+  return (
+    <>
+      <Header />
+      <div className="dashboard">{localStorage.getItem('apikey-client')}</div>
+    </>
+  );
 }
