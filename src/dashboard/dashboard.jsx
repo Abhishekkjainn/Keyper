@@ -1,157 +1,10 @@
-// import Header from '../compnents/header';
-// export default function Dashboard() {
-//   return (
-//     <>
-//       <Header />
-//       <div className="dashboardpage">
-//         <div className="analyticssection">
-//           <div className="anal">
-//             <img src="/total.png" alt="" className="imgbg" />
-//             <div className="topcard">
-//               <div className="title">1. Total Users</div>
-//               <div className="timepicker">Select Date Range</div>
-//             </div>
-//             <div className="middlecard">15,523</div>
-//             <div className="bottomcard">From Feb 2022 to Feb 2025</div>
-//           </div>
-//           <div className="anal">
-//             <img src="/logins.png" alt="" className="imgbg" />
-//             <div className="topcard">
-//               <div className="title">2. Total Login</div>
-//               <div className="timepicker">Select Date Range</div>
-//             </div>
-//             <div className="middlecard">17,268</div>
-//             <div className="bottomcard">From Feb 2022 to Feb 2025</div>
-//           </div>
-//           <div className="anal">
-//             <img src="/peak.png" alt="" className="imgbg" />
-//             <div className="topcard">
-//               <div className="title">3. Peak Users</div>
-//               <div className="timepicker">Select Date Range</div>
-//             </div>
-//             <div className="middlecard">Feb</div>
-//             <div className="bottomcard">From Feb 2022 to Feb 2025</div>
-//           </div>
-//         </div>
-//       </div>
-//     </>
-//   );
-// }
-
-// import { useState, useEffect } from 'react';
-// import Header from '../compnents/header';
-// import Loader from '../compnents/loader';
-
-// export default function Dashboard() {
-//   const [clientData, setClientData] = useState(null);
-//   const [loading, setLoading] = useState(true);
-//   const [error, setError] = useState(null);
-
-//   useEffect(() => {
-//     const fetchClientData = async () => {
-//       try {
-//         const apiKey = localStorage.getItem('apikey-client');
-//         if (!apiKey) {
-//           throw new Error('No API key found in local storage');
-//         }
-
-//         const response = await fetch(
-//           `https://keyperapi.vercel.app/getclient/${apiKey}`
-//         );
-
-//         if (!response.ok) {
-//           throw new Error(`API request failed with status ${response.status}`);
-//         }
-
-//         const data = await response.json();
-//         setClientData(data);
-//         console.log(data);
-//       } catch (err) {
-//         setError(err.message);
-//         console.error('Error fetching client data:', err);
-//       } finally {
-//         setLoading(false);
-//       }
-//     };
-
-//     fetchClientData();
-//   }, []);
-
-//   if (loading) {
-//     return (
-//       <>
-//         <Header />
-//         <div className="loading-screen">
-//           <Loader />
-//         </div>
-//       </>
-//     );
-//   }
-
-//   if (error) {
-//     return (
-//       <>
-//         <Header />
-//         <div className="error-screen">
-//           <p>Error: {error}</p>
-//           <p>Please try again later or contact support.</p>
-//         </div>
-//       </>
-//     );
-//   }
-
-//   return (
-//     <>
-//       <Header />
-//       <div className="dashboardpage">
-//         <div className="analyticssection">
-//           <div className="anal">
-//             <img src="/total.png" alt="" className="imgbg" />
-//             <div className="topcard">
-//               <div className="title">1. Total Users</div>
-//               <div className="timepicker">Select Date Range</div>
-//             </div>
-//             <div className="middlecard">{clientData?.totalUsers || 'N/A'}</div>
-//             <div className="bottomcard">
-//               {clientData?.dateRange || 'From Feb 2022 to Feb 2025'}
-//             </div>
-//           </div>
-//           <div className="anal">
-//             <img src="/logins.png" alt="" className="imgbg" />
-//             <div className="topcard">
-//               <div className="title">2. Total Logins</div>
-//               <div className="timepicker">Select Date Range</div>
-//             </div>
-//             <div className="middlecard">{clientData?.totalLogins || 'N/A'}</div>
-//             <div className="bottomcard">
-//               {clientData?.dateRange || 'From Feb 2022 to Feb 2025'}
-//             </div>
-//           </div>
-//           <div className="anal">
-//             <img src="/peak.png" alt="" className="imgbg" />
-//             <div className="topcard">
-//               <div className="title">3. Peak Users</div>
-//               <div className="timepicker">Select Date Range</div>
-//             </div>
-//             <div className="middlecard">
-//               {clientData?.peakUsersMonth || 'N/A'}
-//             </div>
-//             <div className="bottomcard">
-//               {clientData?.dateRange || 'From Feb 2022 to Feb 2025'}
-//             </div>
-//           </div>
-//         </div>
-//       </div>
-//     </>
-//   );
-// }
-
 import { useState, useEffect } from 'react';
 import Header from '../compnents/header';
 import Loader from '../compnents/loader';
 import ProfileLoader from '../compnents/profileloader';
 
 export default function Dashboard() {
+  // const apikey = '5Iyx6x7vB';
   const [metrics, setMetrics] = useState({
     totalUsers: 0,
     totalLogins: 0,
@@ -170,7 +23,7 @@ export default function Dashboard() {
   useEffect(() => {
     const fetchClientData = async () => {
       try {
-        const apiKey = localStorage.getItem('apikey');
+        const apiKey = localStorage.getItem('apiKey');
         if (!apiKey) throw new Error('No API key found');
 
         const response = await fetch(
