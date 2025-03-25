@@ -127,7 +127,7 @@ export default function RegistrationPage() {
 
       if (data.success) {
         // Save API key to localStorage
-        localStorage.setItem('apikey-client', data.data.apikey);
+        localStorage.setItem('apikey', data.data.apikey);
 
         // Print client data to console
         console.log('Client Data:', data.data);
