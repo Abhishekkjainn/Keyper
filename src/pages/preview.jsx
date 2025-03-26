@@ -1,7 +1,7 @@
 export default function Preview() {
   return (
     <div className="previewdiv">
-      <img src="/preview.png" alt="" className="preview" />
+      <img src="/desktop.png" alt="" className="preview" />
     </div>
   );
 }

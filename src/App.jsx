@@ -5,6 +5,7 @@ import Loading from './pages/loading';
 import Dashboard from './dashboard/dashboard';
 import Profile from './profile/profile';
 import RegistrationPage from './dashboard/registrationpage';
+import Doc from './pages/documentation';
 // import Dashboard from './pages/dashboard';
 
 function App() {
@@ -20,6 +21,7 @@ function App() {
         <Route path="/dashboard" element={<Dashboard />} />
         <Route path="/profile" element={<Profile />} />
         <Route path="/register" element={<RegistrationPage />} />
+        <Route path="/documentation" element={<Doc />} />
       </Routes>
     </Router>
   );

@@ -2,19 +2,19 @@ import { Link } from 'react-router-dom';
 export default function Header() {
   return (
     <div className="headermain">
-      <div className="topheader">
+      <Link to={'/'} className="topheader">
         <img src="titlelog.png" alt="mainlogo" className="toplogo" />
         <div className="toptag">Keyper</div>
-      </div>
+      </Link>
       <div className="header">
         <Link to={'/'} className="home">
           <img src="titlelog.png" alt="mainlogo" className="toplogoheader" />
           <div className="toptagheader">Keyper</div>
         </Link>
         <div className="links">
-          <div className="link">
+          <Link to={'/documentation'} className="link">
             <img src="/docs.png" alt="docs" className="linktag" /> Docs
-          </div>
+          </Link>
           <Link to={'/dashboard'} className="link">
             <img src="/dashboard.png" alt="docs" className="linktag" />{' '}
             Dashboard
