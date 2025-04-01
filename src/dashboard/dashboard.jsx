@@ -4,7 +4,7 @@ import Loader from '../compnents/loader';
 import ProfileLoader from '../compnents/profileloader';
 
 export default function Dashboard() {
-  // const apikey = '5Iyx6x7vB';
+  // const apikey = 'q6SkRSe0P';
   const [metrics, setMetrics] = useState({
     totalUsers: 0,
     totalLogins: 0,
@@ -23,7 +23,7 @@ export default function Dashboard() {
   useEffect(() => {
     const fetchClientData = async () => {
       try {
-        const apiKey = localStorage.getItem('apiKey');
+        const apiKey = localStorage.getItem('apiKey-client');
         if (!apiKey) throw new Error('No API key found');
 
         const response = await fetch(

@@ -2,7 +2,7 @@ import { useEffect } from 'react';
 import { BrowserRouter as Router, Routes, Route, Link } from 'react-router-dom';
 
 export default function Page1() {
-  const apikey = '5Iyx6x7vB';
+  const apikey = 'q6SkRSe0P';
 
   const handleRedirect = async () => {
     const currentUrl = encodeURIComponent(window.location.href);
