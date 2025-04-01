@@ -4,7 +4,7 @@ import Loader from '../compnents/loader';
 import ProfileLoader from '../compnents/profileloader';
 
 export default function Dashboard() {
-  const apiKey = 'q6SkRSe0P';
+  var apiKey = 'q6SkRSe0P';
   const [metrics, setMetrics] = useState({
     totalUsers: 0,
     totalLogins: 0,
