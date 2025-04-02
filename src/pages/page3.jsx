@@ -4,10 +4,22 @@ import 'prismjs/themes/prism-tomorrow.css'; // VS Code-like dark theme
 import 'prismjs/components/prism-javascript'; // Syntax highlighting for JS
 
 export default function Page3() {
-  const codeSnippet = `fetch(\`https://keyper/authenticate/<API_KEY>\`)  
-    .then(res => res.json())  
-    .then(data => console.log('Authentication Successful:', data))  
-    .catch(err => console.error('Authentication Failed:', err));`;
+  const codeSnippet = `const handleRedirect = async () => {
+    const currentUrl = encodeURIComponent(window.location.href);
+    const apiUrl = 'https://keyperapi.vercel.app/redirect/<currentUrl>/<apikey>';
+  
+    try {
+      const response = await fetch(apiUrl, { method: 'GET' });
+      if (response.redirected) {
+        window.location.href = response.url;
+      } else {
+        console.log('Redirect failed:', await response.text());
+      }
+    } catch (error) {
+      console.error('Error fetching redirect:', error);
+    }
+  };
+  `;
 
   const [copied, setCopied] = useState(false);
 
@@ -31,7 +43,7 @@ export default function Page3() {
 
       {/* Headings */}
       <div className="page2header">
-        Three Lines of Code and BOOM!
+        Some Lines of Code and BOOM!
         <br />
         <span className="highlight">
           Instant, Secure, and Simple Authentication.

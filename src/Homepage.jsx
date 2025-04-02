@@ -17,7 +17,9 @@ export default function Homepage() {
       <div className="docsbuttondiv">
         <div className="docsbutton">
           <img src="/docs.png" alt="Docs" className="docimg" />
-          <div className="docstag">View Keyper Docs</div>
+          <Link to={'/documentation'} className="docstag">
+            View Keyper Docs
+          </Link>
         </div>
       </div>
     </>
