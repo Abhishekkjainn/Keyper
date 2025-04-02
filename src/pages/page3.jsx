@@ -43,7 +43,7 @@ export default function Page3() {
 
       {/* Headings */}
       <div className="page2header">
-        Some Lines of Code and BOOM!
+        One API Call and BOOM!
         <br />
         <span className="highlight">
           Instant, Secure, and Simple Authentication.
